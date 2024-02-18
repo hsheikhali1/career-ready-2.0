@@ -1,4 +1,5 @@
 ---
+import { Navigation } from "../components/navigation/navigation";
 ---
 
 <html lang="en">
@@ -11,6 +12,7 @@
 		<title>{Astro.props.title}</title>
 	</head>
 	<body>
+    <Navigation client:load />
     <slot />
 	</body>
 </html>

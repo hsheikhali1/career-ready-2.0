@@ -1,0 +1,28 @@
+---
+import Image from "astro/components/Image.astro"
+
+import studentsText from "../../../public/100_students.png";
+import students from "../../../public/students.png";
+---
+
+<header class="bg-[#0C1827] pt-9 px-3 flex flex-col text-center">
+  <div class="mb-6">
+    <h1 class="text-white leading-[1] font-normal text-[58px] font-big-shoulders-display">
+      We’re changing the way people learn.
+    </h1>
+    <p class="text-[#96A3B2] mt-4 font-satoshi font-medium">
+      At Career Ready, we believe in giving everyone the chance to succeed. Through personalized mentorship and expert-led programs, unlock your full potential. Join us now to start your journey to success!
+    </p>
+  </div>
+  <div class="flex flex-col space-y-3">
+    <button class="font-satoshi font-bold text-[#0C1827] p-4 bg-[#5FE668] rounded-[4px]">Start learning<button>
+    <button class="font-satoshi font-bold text-white border-white border-2 border-solid p-4 rounded-[4px] hover:border-[#5FE668] hover:text-[#0C1827] hover:bg-[#5FE668] hover:transition-all">Schedule a discovery call<button>
+  </div>
+  <div>
+    <p class="font-medium text-[#96A3B2] py-3">Universally acclaimed and entrusted by students spanning the entire globe.</p>
+    <div class="flex flex-row justify-center gap-4 px-3 pb-14">
+      <Image height={30} src={students} alt="students" />
+      <Image width={140} src={studentsText} alt="100+ students" />
+    </div>
+  </div>
+</header>
