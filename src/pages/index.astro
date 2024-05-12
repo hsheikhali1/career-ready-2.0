@@ -2,18 +2,137 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/hero/hero.astro";
 import Card from "../components/card/card.astro";
+import { Image } from "astro:assets";
+
+import star from "public/star.svg";
+import careerStar from "public/career-star.svg";
+import customer from "public/customer.jpg";
 
 const title = "Home Page";
 
-const webDevelopment = "Transform your career with web development skills. If you're new to web development or need a mentor to build on exisiting skills our experts will help you gain the skills you need to succeed.";
-const projectManagement = "Take control of your projects and achieve success with our project management courses. Our expert instructors and mentors will teach you the skills and tools you need to plan, execute, and monitor projects of all sizes."
+const webDevelopment =
+  "Transform your career with web development skills. If you're new to web development or need a mentor to build on exisiting skills our experts will help you gain the skills you need to succeed.";
+const projectManagement =
+  "Take control of your projects and achieve success with our project management courses. Our expert instructors and mentors will teach you the skills and tools you need to plan, execute, and monitor projects of all sizes.";
+
+const cloudComputing =
+  "Unlock the power of the cloud with our cloud computing courses. Our expert instructors and mentors will teach you the latest techniques and tools to design, deploy, and manage cloud-based systems and applications.";
 ---
 
 <MainLayout title={title}>
   <Hero />
-  <section class="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4 py-6 md:py-8 lg:py-24 px-3 lg:px-8 mx-auto">
-    <Card title="Web development" description={webDevelopment}/>
-    <Card title="projectManagement" description={projectManagement} />
-    <Card />
+  <section
+    class="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4 py-16 md:py-24 px-3 lg:px-8 mx-auto"
+  >
+    <Card
+      image="/public/web-development.png"
+      title="Web development"
+      description={webDevelopment}
+    />
+    <Card
+      image="/public/project-management.png"
+      title="Project Management"
+      description={projectManagement}
+    />
+    <Card
+      title="Cloud Computing"
+      description={cloudComputing}
+      image="/public/cloud-computing.png"
+    />
+  </section>
+  <section
+    class="grid grid-cols-1 pb-16 md:pb-24 px-3 lg:px-8 mx-auto space-y-4 lg:space-y-0"
+  >
+    <h1
+      class="flex flex-col items-center font-medium text-[48px] font-big-shoulders-display leading-[56px] text-center"
+    >
+      <span
+        class="flex flex-row gap-2 font-satoshi text-career-orange text-lg font-medium"
+      >
+        <Image src={star} alt="asterisk" />
+        What to expect
+      </span>
+      Be Confident in your learning journey
+    </h1>
+    <p class="font-satoshi font-medium text-center leading-6">
+      Our experienced mentors offer guidance across various industries to help
+      you excel in your career journey. Whether advancing your skills or
+      exploring a new direction, we're here to support your success.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-6">
+      <div class="bg-career-dark py-10 px-2 rounded-md">
+        <Image src={careerStar} alt="career star" />
+        <div class="py-6">
+          <h2
+            class="text-white font-semibold font-big-shoulders-display text-2xl"
+          >
+            Qualified mentors
+          </h2>
+          <p class="text-base font-medium font-satoshi text-career-gray">
+            Learn from qualifed, experienced, certified mentors and instructors.
+          </p>
+        </div>
+        <div class="py-6">
+          <h2
+            class="text-white font-semibold font-big-shoulders-display text-2xl"
+          >
+            Custom Curriculum
+          </h2>
+          <p class="text-base font-medium font-satoshi text-career-gray">
+            Everyone learns differently, so our mentors help curate a custom
+            curriculum to help you learn in the most affective way for you. (for
+            mentorship package only)
+          </p>
+        </div>
+
+        <div class="py-6">
+          <h2
+            class="text-white font-semibold font-big-shoulders-display text-2xl"
+          >
+            Industry Standard
+          </h2>
+          <p class="text-base font-medium font-satoshi text-career-gray">
+            Learn industry standard practices along the way.
+          </p>
+        </div>
+
+        <div class="py-6">
+          <h2
+            class="text-white font-semibold font-big-shoulders-display text-2xl"
+          >
+            Qualified mentors
+          </h2>
+          <p class="text-base font-medium font-satoshi text-career-gray">
+            Learn from qualifed, experienced, certified mentors and instructors.
+          </p>
+        </div>
+      </div>
+      <div
+        class="border-solid border-career-green border-[15px] mt-5 md:mt-0 rounded-md"
+      >
+        <Image
+          class="sm:h-[624px] xl:aspect-square"
+          src={customer}
+          alt="customer"
+        />
+      </div>
+    </div>
+  </section>
+  <section
+    class="bg-career-dark grid grid-cols-1 pb-16 md:pb-24 px-3 lg:px-8 mx-auto"
+  >
+    <div class="py-16 space-y-4">
+      <h2
+        class="text-center flex flex-col text-white font-big-shoulders-display font-medium text-[48px] leading-tight"
+      >
+        <span class="block pb-4 text-career-orange font-medium text-lg font-satoshi">Pricing</span>
+        Pricing plans for professionals of all levels
+      </h2>
+      <p class="text-center font-medium text-lg text-career-gray">
+        Choose an affordable plan that’s packed with the best features for your
+        growth and success in your future career. Either pay all at once or use
+        Klarna to pay in interest-free installments
+      </p>
+    </div>
   </section>
 </MainLayout>
