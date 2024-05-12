@@ -1,10 +1,19 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/hero/hero.astro";
+import Card from "../components/card/card.astro";
 
 const title = "Home Page";
+
+const webDevelopment = "Transform your career with web development skills. If you're new to web development or need a mentor to build on exisiting skills our experts will help you gain the skills you need to succeed.";
+const projectManagement = "Take control of your projects and achieve success with our project management courses. Our expert instructors and mentors will teach you the skills and tools you need to plan, execute, and monitor projects of all sizes."
 ---
 
 <MainLayout title={title}>
   <Hero />
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4 py-6 md:py-8 lg:py-24 px-3 lg:px-8 mx-auto">
+    <Card title="Web development" description={webDevelopment}/>
+    <Card title="projectManagement" description={projectManagement} />
+    <Card />
+  </section>
 </MainLayout>

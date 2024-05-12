@@ -1,0 +1,12 @@
+---
+const { image, title, description, href } = Astro.props;
+---
+
+<div class="flex flex-col">
+  <img class="bg-[#0C1827] p-8" src={image} alt="card-image" />
+  <div class="p-5 flex flex-col space-y-4 bg-white">
+    <h2 class="text-[#0C1827] text-lg">{title}</h2>
+    <p class="text-[#0C1827]">{description}</p>
+    <a class="bg-[#0C1827] text-lg text-center text-white p-4 rounded-md" href={href}>Get Info<a>
+  </div>
+</div>
